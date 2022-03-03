@@ -5,7 +5,7 @@
       <el-button type='primary' @click='$router.push("/home/page")'>Go Home Page</el-button>
       <el-button type='primary' @click='$router.push("/person/index")'>Go Person Index</el-button>
       <el-button type='primary' @click='$router.push("/person/page")'>Go Person Page</el-button>
-      <el-button type='primary' @click='$router.push("/my-sub0/home")'>Go My Sub0</el-button>
+      <el-button type='primary' @click='$router.push("/my-sub0")'>Go My Sub0</el-button>
       
     </div>
     <div class='dashboard-content'>
