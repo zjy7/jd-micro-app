@@ -14,6 +14,14 @@ export default {
     return {
       myTime: null
     }
-  }
+  },
+  created(){
+    console.log('sub0 home index created')
+
+    console.log(document)
+
+    console.log(document.querySelectorAll('micro-app')[0])
+    
+  },
 }
 </script>
