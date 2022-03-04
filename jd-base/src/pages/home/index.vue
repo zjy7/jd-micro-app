@@ -6,6 +6,8 @@
       type="date"
       placeholder="选择日期">
     </el-date-picker>
+    <br>
+    $store.state.sub0Data.name is : {{ $store.state.sub0Data.name }}
   </div>
 </template>
 <script>

@@ -61,14 +61,14 @@ const routerRoutes = [
   {
     // 👇 非严格匹配，/my-page/* 都指向 MyPage 页面
     path: '/my-sub0', // vue-router@4.x path的写法为：'/my-page/:page*'
-    name: 'my-sub0',
+    name: 'mySub0',
     component: Dashboard,
     redirect: '/my-sub0/home',
     children:[
       {
         component: mySub0,
         path: 'home',
-        name: 'Sub0page',
+        name: 'mySub0page',
         meta: {
           menuName: '首页page',
         }

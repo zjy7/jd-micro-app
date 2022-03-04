@@ -10,15 +10,36 @@
       name='my-sub0' 
       url='http://localhost:8030/' 
       baseroute='/my-sub0'
+      :data="sub0Data"
+      @datachange='handleDataChange'
       >
     </micro-app>
   </div>
 </template>
 <script>
-
+import _ from 'lodash'
 export default {
+  data(){
+    return {
+      sub0: {
+        data: {
+          name: 'my-sub0-test-name',
+        }
+      }
+    }
+  },
+  computed: {
+    sub0Data(){
+      return _.cloneDeep(this.$store.state.sub0Data)
+    }
+  },
+  methods: {
+    handleDataChange(data){
+      console.log('my-sub0 handleDataChange', data.detail.data)
+      this.$store.commit('setSub0Data', _.cloneDeep(data.detail.data))
+    }
+  },
   created(){
-    // debugger
     console.log('base application my-sub0 created')
   }
 }

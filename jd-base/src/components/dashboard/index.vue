@@ -11,6 +11,10 @@
     <div class='dashboard-content'>
       <div class='dashboard-content-left'>
         主应用 左侧菜单
+        <br>
+        <el-input v-model="str"></el-input>
+        <br>
+        <el-button @click='clickBtn'>提交</el-button>
       </div>
       <div class='dashboard-content-right'>
         <router-view />
@@ -18,6 +22,22 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  data(){
+    return {
+      str: ''
+    }
+  },
+  methods:{
+    clickBtn(){
+      this.$store.commit('setSub0Data', {name: this.str})
+      window.microApp && window.microApp.dispatch({ name: this.str })
+      this.str = ''
+    }
+  },
+}
+</script>
 <style lang="less" scoped>
 .dashboard{
   display: flex;

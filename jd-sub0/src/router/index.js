@@ -4,7 +4,7 @@ import BaseRoutes from './base-routes'
 Vue.use(Router)
 
 const routes = BaseRoutes
-console.log(routes)
+// console.log(routes)
 const routerPush = Router.prototype.push
 
 Router.prototype.push = function push (location) {
